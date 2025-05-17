@@ -1,0 +1,12 @@
+online_store\epam_task\EpamTaskApplication.class
+config\WebAppInitializer.class
+service\UserService.class
+controller\MainController.class
+entity\User.class
+entity\Product.class
+entity\Order.class
+config\WebSecurityConfig.class
+config\WebAppConfig.class
+dao\UserDAO.class
+dao\UserDAOImpl.class
+service\UserServiceImpl.class

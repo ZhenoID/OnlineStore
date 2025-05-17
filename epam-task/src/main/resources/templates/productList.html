@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head>
+  <title>Products</title>
+</head>
+<body>
+<h1>Список товаров</h1>
+<table border="1">
+  <tr><th>Название</th><th>Описание</th><th>Цена</th></tr>
+  <tr th:each="product : ${products}">
+    <td th:text="${product.name}">Name</td>
+    <td th:text="${product.description}">Description</td>
+    <td th:text="${product.price}">Price</td>
+  </tr>
+</table>
+<div sec:authorize="hasRole('ADMIN')">
+  <a th:href="@{/products/add}">Добавить товар</a>
+</div>
+</body>
+</html>
